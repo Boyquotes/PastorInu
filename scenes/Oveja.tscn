@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Oveja.gd" type="Script" id=1]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="SphereShape" id=3]
+radius = 25.0
+
+[sub_resource type="SphereShape" id=4]
+radius = 10.0
+
+[node name="Oveja" type="KinematicBody" groups=[
+"entidades",
+"ovejas",
+]]
+collision_layer = 5
+collision_mask = 7
+script = ExtResource( 1 )
+limite_interior = 2.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="DetectorOvejas" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="DetectorOvejas"]
+shape = SubResource( 3 )
+
+[node name="DetectorPerro" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="DetectorPerro"]
+shape = SubResource( 4 )

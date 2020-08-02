@@ -27,6 +27,15 @@ click_sec={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="world"
+3d_physics/layer_1="world"
+2d_physics/layer_2="perro"
+3d_physics/layer_2="perro"
+2d_physics/layer_3="ovejas"
+3d_physics/layer_3="oveja"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

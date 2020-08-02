@@ -1,18 +1,35 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Suelo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Oveja.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="Suelo" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.1, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0 )
 
-[node name="Player" parent="." groups=[
-"entidades",
-] instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2, 0 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -13, 2, 19 )
 
 [node name="Camera" type="Camera" parent="Player"]
-transform = Transform( 1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 12, -8 )
+transform = Transform( 1, 0, 0, 0, -0.866025, 0.5, 0, -0.5, -0.866025, 0, 12, -15 )
+
+[node name="Ovejas" type="Node" parent="."]
+
+[node name="Oveja" parent="Ovejas" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -5 )
+
+[node name="Oveja2" parent="Ovejas" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, -5 )
+
+[node name="Oveja3" parent="Ovejas" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -8 )
+
+[node name="Oveja4" parent="Ovejas" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2, -5 )
+
+[node name="Oveja5" parent="Ovejas" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 2, -21 )
