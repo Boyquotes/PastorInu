@@ -1,5 +1,9 @@
 extends KinematicBody
 
+enum {
+	PASTAR, HUIR, MOVER
+}
+
 export(int) var speed := 15
 export(int) var accel := 50
 export(float) var limite_exterior = 5.0

@@ -1,21 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Suelo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
 [ext_resource path="res://scenes/Oveja.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Camera.gd" type="Script" id=5]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="Suelo" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2.1, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0 )
+transform = Transform( 43.992, 0, 0, 0, 1, 0, 0, 0, 41.286, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -13, 2, 19 )
 
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 1, 0, 0, 0, -0.866025, 0.5, 0, -0.5, -0.866025, 0, 12, -15 )
+script = ExtResource( 5 )
 
 [node name="Ovejas" type="Node" parent="."]
 
