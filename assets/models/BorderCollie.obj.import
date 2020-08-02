@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/BorderCollie.obj-726f746e33a37920077a99d0f40ca4f7.mesh"
+
+[deps]
+
+files=[ "res://.import/BorderCollie.obj-726f746e33a37920077a99d0f40ca4f7.mesh" ]
+
+source_file="res://assets/models/BorderCollie.obj"
+dest_files=[ "res://.import/BorderCollie.obj-726f746e33a37920077a99d0f40ca4f7.mesh", "res://.import/BorderCollie.obj-726f746e33a37920077a99d0f40ca4f7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
