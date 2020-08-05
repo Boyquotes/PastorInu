@@ -19,6 +19,15 @@ config/name="PastorInu"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Utils="*res://Utils.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [input]
 
 click_sec={
